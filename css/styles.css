@@ -96,8 +96,8 @@ h2 { font-size: 50px;}
 .container {
     margin-right: auto;
     margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 a {
@@ -117,10 +117,114 @@ nav a:focus {
   border-bottom: 2px solid #f8b160;
 }
 
+button:hover,
+button:focus {
+  cursor: pointer;
+}
+
 /* Layout */
 
 body {
   background-color: #14131c;
   padding: 0;
-  margin: 0;;
+  margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* Hero Section */
+
+div.homepage-hero {
+  height: 100vh;
+  background-image: url("/images/pasta-plate.png");
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+}
+
+div.homepage-hero-intro {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  padding: 0 120px;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+div.homepage-hero-intro::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #9b9aa0;
+  mix-blend-mode: multiply;
+}
+
+h1.home-heading {
+  display: flex;
+  place-content: center ;
+  padding-top: 5rem;
+  margin-bottom: 0.25rem;
+}
+
+span.slogan {
+  display: flex;
+  place-content: center;
+  padding: 0 1rem 3rem;
+  margin-bottom: 1rem;
+}
+
+button.book-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  place-self: center;
+  background-color: #e5e5e5;
+  color: #000;
+  padding: 1rem 4rem;
+}
+
+/* End Hero Section */
+
+/* Header Section */
+
+header.header-desk {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 3rem 0 0;
+  margin-bottom: 1rem;
+}
+
+.logo-name {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+}
+
+.logo-name .name {
+  font-family: 'Anglecia Pro Display';
+  font-size: 25px;
+  letter-spacing: 5px;
+  margin-bottom: 0.25rem;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 2rem;
+}
+
+/* End Header Section */
+
+section.lead {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 3rem;
+  padding: 0 120px 0;
 }
