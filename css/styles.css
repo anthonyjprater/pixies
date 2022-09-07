@@ -82,7 +82,7 @@ html {
 
 h1,h2,h3,h4,h5,h6,hgroup,dd,figure,
 pre,table,fieldset,hr{
-    margin-bottom:1.5rem;
+    margin-bottom:1rem;
     font-family: 'Anglecia Pro Display';
 }
 
@@ -132,6 +132,15 @@ body {
   flex-flow: column nowrap;
 }
 
+main {
+  padding: 0rem 7.5rem 0rem;
+}
+
+section {
+  padding: 5rem 0rem 5rem;
+  margin-bottom: 1rem;
+}
+
 /* Hero Section */
 
 div.homepage-hero {
@@ -143,6 +152,7 @@ div.homepage-hero {
   position: relative;
   isolation: isolate;
   display: grid;
+  margin-bottom: 8rem;
 }
 
 div.homepage-hero-intro {
@@ -222,9 +232,29 @@ header.header-desk {
 
 /* End Header Section */
 
+/* Lead Section */
 section.lead {
   display: flex;
   flex-flow: row nowrap;
-  gap: 3rem;
-  padding: 0 120px 0;
+  gap: 9rem;
 }
+
+img.lead-img {
+  padding: 10px;
+  border-bottom: 1px #fafafa solid;
+}
+
+img.lead-left {
+  border-left: 1px #fafafa solid;
+}
+
+img.lead-right {
+  border-right: 1px #fafafa solid;
+}
+
+/* End Lead Section*/
+
+/* Review Section */
+
+
+/* End Review Section */
