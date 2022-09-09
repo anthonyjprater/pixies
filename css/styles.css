@@ -108,13 +108,10 @@ a:visited {
   color: #fafafa;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: #f8b160;
-}
-
-nav a:hover,
-nav a:focus {
-  border-bottom: 2px solid #f8b160;
+  cursor: pointer;
 }
 
 button:hover,
@@ -187,14 +184,34 @@ span.slogan {
   margin-bottom: 1rem;
 }
 
-button.book-table {
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
   place-self: center;
-  background-color: #e5e5e5;
-  color: #000;
   padding: 1rem 4rem;
+  width: 15rem;
+}
+
+.btn:active {
+  border: 2px solid #000;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #9a9a9a;
+  color: #14131c;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px #9a9a9a, -2px -2px 5px #9a9a9a;
+}
+
+.btn.btn-lead {
+  outline: 1px solid #fafafa;
+}
+
+.btn.book-table {
+  background-color: #e5e5e5;
+  color: #14131c;
 }
 
 /* End Hero Section */
