@@ -127,6 +127,9 @@ body {
   margin: 0;
   display: flex;
   flex-flow: column nowrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 100%;
 }
 
 main {
@@ -139,6 +142,10 @@ section {
 }
 
 /* Hero Section */
+
+.fa-solid {
+  color: red;
+}
 
 div.homepage-hero {
   height: 100vh;
@@ -272,6 +279,26 @@ img.lead-right {
 /* End Lead Section*/
 
 /* Review Section */
+.review-link-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
 
+.review-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 3rem;
+}
+
+.review {
+  width: 24rem;
+  max-height: 20rem;
+  padding: 4.25rem 2.25rem 2.5rem;
+  border: 1px solid #fafafa;
+  text-wrap: none;
+}
 
 /* End Review Section */
