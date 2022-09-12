@@ -195,7 +195,6 @@ span.slogan {
   display: flex;
   justify-content: center;
   align-items: center;
-  place-self: center;
   padding: 1rem 4rem;
   width: 15rem;
 }
@@ -219,6 +218,7 @@ span.slogan {
 .btn.book-table {
   background-color: #e5e5e5;
   color: #14131c;
+  place-self: center;
 }
 
 /* End Hero Section */
@@ -259,8 +259,9 @@ header.header-desk {
 /* Lead Section */
 section.lead {
   display: flex;
-  flex-flow: row nowrap;
-  gap: 9rem;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 img.lead-img {
@@ -276,10 +277,33 @@ img.lead-right {
   border-right: 1px #fafafa solid;
 }
 
+.lead-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 30rem;
+}
+
+.lead-wrapper > h2 {
+  margin-bottom: 0;
+}
+
+p.section-descriptor {
+  max-width: 25rem;
+}
+
 /* End Lead Section*/
 
-/* Review Section */
-.review-link-wrapper {
+/* Review Section and Gallery Section*/
+.reviews,
+.gallery {
+  display: flex;
+  flex-flow: column;
+  align-items:stretch;
+}
+
+.lead-link-wrapper {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -298,7 +322,67 @@ img.lead-right {
   max-height: 20rem;
   padding: 4.25rem 2.25rem 2.5rem;
   border: 1px solid #fafafa;
-  text-wrap: none;
+  overflow-wrap: break-word;
 }
 
-/* End Review Section */
+.gallery-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.gallery-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow:  5px 5px 5px #333;
+}
+
+.gallery-images img:hover {
+  filter: drop-shadow(15px 15px 15px #555)
+}
+
+.instagram-link {
+  display: flex;
+  gap: 1rem;
+}
+
+div.carousel-controls {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 200px;
+}
+
+.instagram-link:hover svg:hover,
+div.carousel-controls svg:hover {
+  fill: #f8b160;
+  cursor: pointer;
+}
+
+/* End Review and Gallery Section */
+
+/* Booking Section  */
+
+section.booking {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+div.booking-wrapper {
+  width: 40rem;
+  max-width: 50%;
+}
+
+fieldset {
+  border: 1px solid #fafafa;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+legend {
+  padding: 5px;
+}
