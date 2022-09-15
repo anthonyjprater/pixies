@@ -3,6 +3,10 @@
   src: url('fonts/Manrope-Regular.otf');
  }
  @font-face {
+  font-family: 'ManropeLight';
+  src: url('fonts/Manrope-Light.otf');
+ }
+ @font-face {
   font-family: 'Anglecia Pro Display';
   src: url('fonts/AngleciaProDisplay-Regular.otf');
  }
@@ -81,9 +85,9 @@ html {
 }
 
 h1,h2,h3,h4,h5,h6,hgroup,dd,figure,
-pre,table,fieldset,hr{
+pre,table,hr{
     margin-bottom:1rem;
-    font-family: 'Anglecia Pro Display';
+    font-family: 'Anglecia Pro Display', sans-serif;
 }
 
 h1 {
@@ -200,7 +204,7 @@ span.slogan {
 }
 
 .btn:active {
-  border: 2px solid #000;
+  box-shadow: 5px 5px 5px #000, -5px -5px 5px #000, 5px -5px 5px #000, -5px 5px 5px #000;
 }
 
 .btn:hover,
@@ -208,7 +212,7 @@ span.slogan {
   background-color: #9a9a9a;
   color: #14131c;
   font-weight: bold;
-  box-shadow: 2px 2px 5px #9a9a9a, -2px -2px 5px #9a9a9a;
+  box-shadow: 5px 5px 5px #fff, -5px -5px 5px #fff, 5px -5px 5px #fff, -5px 5px 5px #fff;
 }
 
 .btn.btn-lead {
@@ -220,6 +224,9 @@ span.slogan {
   color: #14131c;
   place-self: center;
 }
+
+.btn.book-table:hover,
+.btn.book-table:focus {}
 
 /* End Hero Section */
 
@@ -264,7 +271,32 @@ section.lead {
   align-items: center;
 }
 
-img.lead-img {
+div.lead-img-wrapper{
+  position: relative;
+}
+
+div.lead-img-wrapper > div::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-bottom: 1px solid #fafafa;
+  /* transform: rotate(0deg); */
+  z-index: 1;
+}
+
+div.wrap-right::after {
+  border-right: 1px solid #fafafa;
+  transform: rotate(0deg) translate(2%, 3%);
+}
+
+div.wrap-left::after {
+  border-left: 1px solid #fafafa;
+  transform: rotate(0deg) translate(-2%, 3%);
+}
+
+
+
+/* img.lead-img {
   padding: 10px;
   border-bottom: 1px #fafafa solid;
 }
@@ -275,7 +307,8 @@ img.lead-left {
 
 img.lead-right {
   border-right: 1px #fafafa solid;
-}
+} */
+
 
 .lead-wrapper {
   display: flex;
@@ -296,8 +329,8 @@ p.section-descriptor {
 /* End Lead Section*/
 
 /* Review Section and Gallery Section*/
-.reviews,
-.gallery {
+section.reviews,
+section.gallery {
   display: flex;
   flex-flow: column;
   align-items:stretch;
@@ -314,13 +347,12 @@ p.section-descriptor {
 .review-list {
   display: flex;
   flex-flow: row wrap;
-  gap: 3rem;
+  justify-content: space-between;
 }
 
 .review {
-  width: 24rem;
-  max-height: 20rem;
-  padding: 4.25rem 2.25rem 2.5rem;
+  max-width: 30%;
+  padding: 2.25rem 2.25rem;
   border: 1px solid #fafafa;
   overflow-wrap: break-word;
 }
@@ -333,7 +365,7 @@ p.section-descriptor {
 }
 
 .gallery-images img {
-  max-width: 100%;
+  max-width: 30%;
   height: auto;
   border-radius: 2px;
   box-shadow:  5px 5px 5px #333;
@@ -362,6 +394,10 @@ div.carousel-controls svg:hover {
   cursor: pointer;
 }
 
+div.carousel-controls svg:active {
+  fill: #000;
+}
+
 /* End Review and Gallery Section */
 
 /* Booking Section  */
@@ -373,8 +409,15 @@ section.booking {
 }
 
 div.booking-wrapper {
-  width: 40rem;
+  width: 45%;
   max-width: 50%;
+}
+
+form.booking-form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  font-family: 'ManropeLight', sans-serif;
 }
 
 fieldset {
@@ -385,4 +428,25 @@ fieldset {
 
 legend {
   padding: 5px;
+}
+
+div.terms-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+input#terms.terms {
+  border: 1px solid #fafafa;
+  width: 1em;
+  height: 1em;
+}
+
+a.terms-link {
+  color: #f8b160;
+}
+
+#booking-button {
+  align-self: flex-start;
+  margin-top: 4rem;
 }

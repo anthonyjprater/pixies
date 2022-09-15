@@ -1,5 +1,5 @@
 document
-  .getElementById("bookingButton")
+  .getElementById("booking-button")
   .addEventListener("click", function (event) {
     event.preventDefault();
   });

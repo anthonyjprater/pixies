@@ -36,7 +36,7 @@
     </div>
         <main>
             <section class="restaurant lead">
-                <img class="lead-img lead-left" src="images/restaurant-lead.png" alt="a table with food and drinks">
+                <div class="lead-img-wrapper"><div class="wrap-right"><img class="lead-img lead-left" src="images/restaurant-lead.png" alt="a table with food and drinks"></div></div>
                 <div class="lead-wrapper">
                     <h2 class="restaurant-lead">Restaurant</h2>
                     <p class="section-descriptor">Pixie's is a quiet unique atmospheric place located in Smokey Point. The combination of delicious food and a pleasant rest has consistently delighted our guests for over 10 years.</p>
@@ -49,10 +49,10 @@
                     <p class="section-descriptor">The menu of our restaurant included all the variety and splendor of fusion cuisine: from twist on famous masterpieces to the signature dishes of our chef.</p>
                     <a href="#" class="btn btn-lead">Go to menu</a>
                 </div>
-                <img class="lead-img lead-right" src="images/menu-lead.png" alt="a delicious dish of food">
+                <div class="lead-img-wrapper"><div class="wrap-left"><img class="lead-img lead-right" src="images/menu-lead.png" alt="a delicious dish of food"></div></div>
             </section>
             <section class="wine lead">
-                <img class="lead-img lead-left" src="images/winelist-lead.png" alt="a table of friends enjoying wine together">
+                <div class="lead-img-wrapper"><div class="wrap-right"><img class="lead-img lead-left" src="images/winelist-lead.png" alt="a table of friends enjoying wine together"></div></div>
                 <div class="lead-wrapper">
                     <h2 class="wine-lead">Wine list</h2>
                     <p class="section-descriptor">A wide selection of wines will not leave indifferent event the most true connoisseurs. And our staff will always help you choose the perfect drink.</p>
@@ -135,16 +135,16 @@
             <section class="booking">
                 <div class="booking-wrapper">
                     <h2 class="booking-lead">Book a table</h2>
-                    <form action="POST">
+                    <form action="POST" class="booking-form">
                         <fieldset><legend>Name</legend><label for="name"><input type="text" name="name" id="name" placeholder="Your Name"></label></fieldset>
                         <fieldset><legend>Phone Number</legend><label for="phone"><input type="tel" name="phone" id="phone" placeholder="+1 555 555 5555"></label></fieldset>
                         <fieldset><legend>Date</legend><label for="date"><input type="date" name="date" id="date"></label></fieldset>
                         <fieldset><legend>Time</legend><label for="reservation"><input type="time" name="reservation" id="reservation"></label></fieldset>
-                        <input type="checkbox" name="terms" id="terms" value="yes"><label for="terms">I agree with Terms of privacy</label>
-                        <button type="submit" id="bookingButton">Book a table</button>
+                        <div class="terms-wrapper"><input type="checkbox" name="terms" class="terms" id="terms" value="yes"><label for="terms">I agree with <a href="" class="terms-link">Terms of privacy</a></label></div>
+                        <button type="submit" id="booking-button" class="btn book-table">Book a table</button>
                     </form>
                 </div>
-                <div class="booking-img"><img class="lead-img lead-right" src="./images/booking-image.png" alt=""></div>
+                <div class="lead-img-wrapper"><div class="wrap-right"><img src="./images/booking-image.png" alt=""></div></div>
             </section>
         </main>
         <footer class="main-footer">
