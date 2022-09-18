@@ -143,6 +143,7 @@ main {
 section {
   padding: 5rem 0rem 5rem;
   margin-bottom: 1rem;
+  gap: 5rem;
 }
 
 /* Hero Section */
@@ -225,9 +226,6 @@ span.slogan {
   place-self: center;
 }
 
-.btn.book-table:hover,
-.btn.book-table:focus {}
-
 /* End Hero Section */
 
 /* Header Section */
@@ -266,12 +264,12 @@ header.header-desk {
 /* Lead Section */
 section.lead {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
 }
 
-div.lead-img-wrapper{
+div.lead-img-wrapper {
   position: relative;
 }
 
@@ -293,22 +291,6 @@ div.wrap-left::after {
   border-left: 1px solid #fafafa;
   transform: rotate(0deg) translate(-2%, 3%);
 }
-
-
-
-/* img.lead-img {
-  padding: 10px;
-  border-bottom: 1px #fafafa solid;
-}
-
-img.lead-left {
-  border-left: 1px #fafafa solid;
-}
-
-img.lead-right {
-  border-right: 1px #fafafa solid;
-} */
-
 
 .lead-wrapper {
   display: flex;
@@ -408,6 +390,10 @@ section.booking {
   justify-content: space-between;
 }
 
+section.booking > div {
+  min-width: 15rem;
+}
+
 div.booking-wrapper {
   width: 45%;
   max-width: 50%;
@@ -450,3 +436,58 @@ a.terms-link {
   align-self: flex-start;
   margin-top: 4rem;
 }
+
+/* End Booking Section */
+
+/* Footer  */
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5rem 5rem;
+}
+
+div.footer-wrapper {
+  border: 1px solid #fafafa;
+  width: 100%;
+  position: relative;
+}
+
+div.footer-wrapper .logo-name {
+  position: absolute;
+  inset: -75% 50% 0 50% ;
+}
+
+svg.social-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+div.contact-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+address.footer-address {
+
+}
+
+/* End Footer  */
+
+/* --------------------------Mobile Media Queries------------------------------- */
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-color: lightblue;
+  }
+ 
+  section.booking {
+    align-items: center;
+  }
+
+}
+
