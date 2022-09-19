@@ -137,7 +137,7 @@ body {
 }
 
 main {
-  padding: 0rem 7.5rem 0rem;
+  padding: 0rem 5rem 0rem;
 }
 
 section {
@@ -230,7 +230,7 @@ span.slogan {
 
 /* Header Section */
 
-header.header-desk {
+header.header-lg {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -446,48 +446,87 @@ footer {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  padding: 0 5rem 5rem;
-}
-
-div.footer-wrapper {
-  border: 1px solid #fafafa;
-  width: 100%;
+  padding: 0 4.25rem 5rem;
   position: relative;
 }
 
-div.footer-wrapper .logo-name {
+div.contact-wrapper {
+  border: 1px solid #fafafa;
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .logo-name {
   position: absolute;
-  inset: -75% 50% 0 50% ;
+  top: -30px;
+  z-index: 2;
+  padding: 10px 25px;
+  background-color: #14131c;
 }
 
 svg.social-icon {
   background-color: #fff;
   border-radius: 50%;
-  padding: 5px;
+  padding: 8px;
 }
 
-div.contact-wrapper {
+div.terms-conditions {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
 }
 
-address.footer-address {
+div.terms-conditions span {
+  text-align: center;
+}
 
+address.footer-address,
+div.socials-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.25em;
+}
+
+div.socials-footer div {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
 }
 
 /* End Footer  */
 
 /* --------------------------Mobile Media Queries------------------------------- */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1124px) {
   body {
-    background-color: lightblue;
+    /* background-color: lightblue; */
   }
- 
+  
+  header.header-lg {
+    justify-content: center;
+  }
+
+  header.header-lg > a {
+    display: none;
+  }
+
   section.booking {
     align-items: center;
   }
 
+  div.contact-wrapper{
+    gap: 2rem;
+  }
+
+  div.terms-conditions {
+    font-size: 0.75rem;
+    order: 3;
+    flex-basis: 100%;
+  }
 }
 
