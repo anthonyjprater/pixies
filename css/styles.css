@@ -258,6 +258,14 @@ header.header-lg {
   flex-flow: row nowrap;
   gap: 2rem;
 }
+div.mobile-menu-hamburger {
+display: none;
+visibility: hidden;
+width: 1px;
+height: 1px;
+position: absolute;
+}
+
 
 /* End Header Section */
 
@@ -326,14 +334,16 @@ section.gallery {
   margin-bottom: 3rem;
 }
 
-.review-list {
+article.review-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 2rem;
 }
 
 .review {
-  max-width: 30%;
+  width: 30%;
+  min-width: 300px;
   padding: 2.25rem 2.25rem;
   border: 1px solid #fafafa;
   overflow-wrap: break-word;
@@ -391,7 +401,7 @@ section.booking {
 }
 
 section.booking > div {
-  min-width: 15rem;
+  min-width: 300px;
 }
 
 div.booking-wrapper {
@@ -503,9 +513,7 @@ div.socials-footer div {
 /* --------------------------Mobile Media Queries------------------------------- */
 
 @media screen and (max-width: 1124px) {
-  body {
-    /* background-color: lightblue; */
-  }
+  
   
   header.header-lg {
     justify-content: center;
@@ -530,3 +538,31 @@ div.socials-footer div {
   }
 }
 
+@media screen and (max-width: 1200px) {
+
+  article.review-list {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  div.review {
+    width: 75%;
+    min-width: 400px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  nav.main-nav > ul {
+    display: none;
+  }
+
+  header.header-lg > a.logo-link {
+    display: block;
+  }
+
+  div.mobile-menu-hamburger {
+    
+  }
+
+}
