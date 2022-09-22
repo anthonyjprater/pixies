@@ -29,17 +29,41 @@
                 <nav class="main-nav">
                     <div class="mobile-menu-hamburger" id="mobile-menu-hamburger">
                         <a href="javascript:void(0);" class="icon" onclick="hamburger()">
-                            
+                            <svg class="hamburger-icon" width="72px" height="72px" viewBox="0 0 72 72" id="emoji" xmlns="http://www.w3.org/2000/svg">
+                                <g id="color"/>
+                                <g id="hair"/>
+                                <g id="skin"/>
+                                <g id="skin-shadow"/>
+                                <g id="line">
+                                  <line x1="16" x2="56" y1="26" y2="26" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                                  <line x1="16" x2="56" y1="36" y2="36" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                                  <line x1="16" x2="56" y1="46" y2="46" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/>
+                                </g>
+                              </svg> 
                         </a>
-                        <ul class="hamburger-menu-nav" id="hamburger-menu-nav">
-                            <li class="mobile-menu-top"></li>
-                            <li class="main-nav__menu-item"><a href="#">Home</a></li>
-                            <li class="main-nav__menu-item"><a href="#">Menu</a></li>
-                            <li class="main-nav__menu-item"><a href="#">Wine list</a></li>
-                            <li class="main-nav__menu-item"><a href="#">About Us</a></li>
-                            <li class="main-nav__menu-item"><a href="#">Events</a></li>
-                            <li class="main-nav__menu-item"><a href="#">Contacts</a></li>
-                        </ul>
+                            
+                        <div class="hamburger-menu-nav-wrapper">
+                            <a href="index.html" class="logo-link">
+                                <div class="logo-name">
+                                    <span class="name">PIXIE'S</span>
+                                    <span class="name-descriptor">Restaurant & Bar</span>
+                                </div>
+                            </a>
+                            <button id="mobile-menu-exit" class="mobile-menu-exit icon" onclick="hamburger()">
+                                <svg width="60px" height="60px" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.7929 7.49998L1.14645 1.85353L1.85356 1.14642L7.50001 6.79287L13.1465 1.14642L13.8536 1.85353L8.20711 7.49998L13.8536 13.1464L13.1465 13.8535L7.50001 8.20708L1.85356 13.8535L1.14645 13.1464L6.7929 7.49998Z" fill="#ffffff"/>
+                                </svg>
+                            </button>
+                            <ul class="hamburger-menu-nav" id="hamburger-menu-nav">
+                                <li class="mobile-menu-top"></li>
+                                <li class="main-nav__menu-item"><a href="#">Home</a></li>
+                                <li class="main-nav__menu-item"><a href="#">Menu</a></li>
+                                <li class="main-nav__menu-item"><a href="#">Wine list</a></li>
+                                <li class="main-nav__menu-item"><a href="#">About Us</a></li>
+                                <li class="main-nav__menu-item"><a href="#">Events</a></li>
+                                <li class="main-nav__menu-item"><a href="#">Contacts</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <ul>
                         <li><a href="">Home</a></li>
