@@ -82,6 +82,9 @@ html {
   font: 1.125rem 'Manrope';
   color: #fafafa;
   line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1,h2,h3,h4,h5,h6,hgroup,dd,figure,
@@ -129,7 +132,9 @@ body {
   background-color: #14131c;
   padding: 0;
   margin: 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
   flex-flow: column nowrap;
   overflow-x: hidden;
   overflow-y: auto;
@@ -166,7 +171,7 @@ div.homepage-hero {
 
 div.homepage-hero-intro {
   height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
   position: relative;
   padding: 0 120px;
   display: flex;
@@ -180,6 +185,7 @@ div.homepage-hero-intro::after {
   z-index: -1;
   background-color: #9b9aa0;
   mix-blend-mode: multiply;
+  min-width: 100%;
 }
 
 h1.home-heading {
@@ -553,6 +559,14 @@ div.socials-footer div {
 
 @media screen and (max-width: 767px) {
 
+  main {
+    padding: 1rem;
+  }
+
+  div.homepage-hero-intro {
+    padding: 0 50px;
+  }
+
   nav.main-nav > ul {
     display: none;
   }
@@ -568,6 +582,8 @@ div.socials-footer div {
 
   div.mobile-menu-hamburger {
     display: block;
+    width: 0px;
+    height: 0px;
     position: relative;
     visibility: visible;
   }
@@ -589,20 +605,50 @@ div.socials-footer div {
     right: -110px;
     padding: 2rem;
     display: none;
-    width: 100vw;
-    height: 100vh;
+    min-width: 725px;
+    min-height: 100vh;
     background-color: #14131c;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(5, auto);
-    z-index: 2;
     gap: 2rem;
-    border: 5px solid gray;
+    justify-content: space-between;
+    z-index: 2;
+    /* border: 5px solid gray; */
   }
 
-  button.mobile-menu-exit icon {
-    width: 50%;
+  div.hamburger-menu-nav-wrapper a.logo-link div.logo-name span.name {
+    font-size: 32px;
   }
 
+  div.hamburger-menu-nav-wrapper a.logo-link div.logo-name span.name-descriptor {
+    font-size: 24px;
+  }
 
+  div.hamburger-menu-nav-wrapper a.logo-link {
+    grid-row: 1;
+  }
+
+  div.hamburger-menu-nav-wrapper #mobile-menu-exit {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  div.hamburger-menu-nav-wrapper ul.hamburger-menu-nav {
+    grid-row: 2;
+    grid-column: span 2;
+    justify-self: start;
+    align-items: flex-start;
+    font-size: 2rem;
+  }
+  
+
+  button.mobile-menu-exit .icon {
+
+  }
+
+  section.lead {
+    flex-flow: column nowrap;
+  }
 
 }
