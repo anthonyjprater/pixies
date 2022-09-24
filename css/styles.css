@@ -571,13 +571,17 @@ div.socials-footer div {
     display: none;
   }
 
-  header.header-lg > a.logo-link {
-    display: block;
+  header.header-lg {
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem 3rem 2rem 0;
+    border-bottom: 2px solid #fff;
+    margin: 0 auto;
   }
 
-  header.header-lg {
-    justify-content: space-between;
-    /* border-bottom: 1px solid #fff; */
+  header.header-lg > a.logo-link {
+    display: block;
+    align-self: flex-start;
   }
 
   div.mobile-menu-hamburger {
@@ -586,6 +590,7 @@ div.socials-footer div {
     height: 0px;
     position: relative;
     visibility: visible;
+    align-self: flex-end;
   }
 
   nav.main-nav ul.hamburger-menu-nav {
@@ -594,9 +599,14 @@ div.socials-footer div {
     align-items: center;
     /* padding: 0.5rem; */
     font-size: 2.5rem;
-    gap: 1rem;
+    gap: 2rem;
     z-index: 2;
-    
+  }
+
+  ul.hamburger-menu-nav li a:hover,
+  ul.hamburger-menu-nav li a:focus {
+    padding: 4px 0;
+    border-bottom: 3px solid #f8b160;
   }
 
   nav.main-nav div.hamburger-menu-nav-wrapper {
@@ -642,6 +652,19 @@ div.socials-footer div {
     font-size: 2rem;
   }
   
+  
+  div.hamburger-menu-nav-wrapper a.btn.book-table {
+    grid-row: 3;
+    grid-column: span 2;
+    width: 100%;
+  }
+
+  div.hamburger-menu-nav-wrapper address {
+    grid-row: 4;
+    grid-column: span 2;
+    margin: 0 auto;
+    align-items: center;
+  }
 
   button.mobile-menu-exit .icon {
 
