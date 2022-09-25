@@ -193,6 +193,8 @@ h1.home-heading {
   place-content: center ;
   padding-top: 5rem;
   margin-bottom: 0.25rem;
+  text-shadow: 2px 2px 5px #9a9a9a, 2px -2px 5px #000;
+  letter-spacing: 2px;
 }
 
 span.slogan {
@@ -200,6 +202,8 @@ span.slogan {
   place-content: center;
   padding: 0 1rem 3rem;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 5px #9a9a9a, 2px -2px 5px #000;
 }
 
 .btn {
@@ -216,10 +220,10 @@ span.slogan {
 
 .btn:hover,
 .btn:focus {
-  background-color: #9a9a9a;
-  color: #14131c;
+  background-color: #25223e;
+  color: #fafafa;
   font-weight: bold;
-  box-shadow: 5px 5px 5px #fff, -5px -5px 5px #fff, 5px -5px 5px #fff, -5px 5px 5px #fff;
+  box-shadow: 5px 5px 10px #353535, -5px -5px 10px #353535, 5px -5px 10px #353535, -5px 5px 10px #353535;
 }
 
 .btn.btn-lead {
@@ -230,6 +234,11 @@ span.slogan {
   background-color: #e5e5e5;
   color: #14131c;
   place-self: center;
+}
+.btn.book-table:hover,
+.btn.btn.book-table:focus {
+  box-shadow: 5px 5px 15px #818181, -5px -5px 15px #818181, 5px -5px 15px #818181, -5px 5px 15px #818181;
+  padding: 1.1rem 4.1rem;
 }
 
 /* End Hero Section */
@@ -244,25 +253,33 @@ header.header-lg {
   margin-bottom: 1rem;
 }
 
-.logo-name {
+
+header.header-lg > a,
+nav.main-nav ul li {
+  text-shadow: 2px 2px 5px #000;
+}
+
+div.logo-name {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   line-height: 1;
+  letter-spacing: 1px;
 }
 
-.logo-name .name {
+div.logo-name .name {
   font-family: 'Anglecia Pro Display';
   font-size: 25px;
   letter-spacing: 5px;
   margin-bottom: 0.25rem;
 }
 
-.main-nav ul {
+nav.main-nav ul {
   display: flex;
   flex-flow: row nowrap;
   gap: 2rem;
+  letter-spacing: 1px;
 }
 div.mobile-menu-hamburger {
 display: none;
@@ -559,6 +576,18 @@ div.socials-footer div {
 
 @media screen and (max-width: 767px) {
 
+  html {
+    font-size: 1.25rem;
+  }
+
+  p {
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    font-size: 58px;
+  }
+
   main {
     padding: 1rem;
   }
@@ -665,11 +694,7 @@ div.socials-footer div {
     margin: 0 auto;
     align-items: center;
   }
-
-  button.mobile-menu-exit .icon {
-
-  }
-
+  
   section.lead {
     flex-flow: column nowrap;
   }
