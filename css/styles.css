@@ -681,9 +681,43 @@ div.socials-footer div {
     flex-flow: column nowrap;
   }
 
+  section.lead > div,
+  section.reviews > div,
+  section.gallery > div,
+  section.booking > div {
+    width: 90%;
+  }
+
   div.lead-img-wrapper {
     order: 2;
-    width: 75%;
+  }
+
+  .btn.btn-lead {
+    width: 100%;
+    padding: 2rem 4rem;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+
+  a.reviews-link.isDisabled {
+      color: #14131c;
+      cursor: not-allowed;
+      opacity: 0;
+      text-decoration: none;
+      width: 1px;
+      height: 1px;
+  }
+
+  div.review p.statement,
+  p.section-descriptor {
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+  }
+
+  section.reviews,
+  section.gallery {
+    align-items: center;
+    justify-content: center;
   }
 
 }

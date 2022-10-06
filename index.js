@@ -17,3 +17,22 @@ function hamburger() {
     // headerEl.style.zIndex = "4";
   }
 }
+
+const mediaQuery = window.matchMedia("(max-width: 767px)");
+
+function handleChanges(e) {
+  if (e.matches) {
+    document.querySelector(".reviews-link").href = "";
+    document.querySelector(".reviews-link").classList.add("isDisabled");
+    // document.querySelector(".reviews-link").style.backgroundColor = "red";
+    console.log("ready!");
+  } else {
+    document.querySelector(".reviews-link").href = "#";
+    document.querySelector(".reviews-link").classList.remove("isDisabled");
+    // document.querySelector(".reviews-link").style.backgroundColor = "green";
+  }
+}
+
+mediaQuery.addListener(handleChanges);
+
+handleChanges(mediaQuery);
