@@ -171,7 +171,6 @@ div.homepage-hero {
 
 div.homepage-hero-intro {
   height: 100vh;
-  min-width: 100vw;
   position: relative;
   padding: 0 120px;
   display: flex;
@@ -670,8 +669,21 @@ div.socials-footer div {
 
   }
 
+  div.homepage-hero {
+    margin-bottom: 1rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+
   section.lead {
     flex-flow: column nowrap;
+  }
+
+  div.lead-img-wrapper {
+    order: 2;
+    width: 75%;
   }
 
 }
