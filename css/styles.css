@@ -223,7 +223,7 @@ span.slogan {
 
 .btn.btn-lead {
   /* outline: 1px solid #fafafa; */
-  border: 1px solid #ffffff;
+  border: 10px dashed #ffffff;
 }
 
 .btn.book-table {
@@ -719,6 +719,11 @@ div.socials-footer div {
   section.gallery {
     align-items: center;
     justify-content: center;
+  }
+
+  section div.lead-link-wrapper {
+    flex-flow: column nowrap;
+    align-items: flex-start;
   }
 
 }
