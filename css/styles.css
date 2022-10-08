@@ -223,7 +223,7 @@ span.slogan {
 
 .btn.btn-lead {
   /* outline: 1px solid #fafafa; */
-  border: 1px solid #fafafa;
+  border: 1px solid #f8b160;
 }
 
 .btn.book-table {
@@ -575,7 +575,7 @@ div.socials-footer div {
     width: 100%;
     justify-content: space-between;
     padding: 2rem 3rem 2rem 0;
-    border-bottom: 2px solid #fff;
+    border-bottom: 3px solid #ffffff;
     margin: 0 auto;
   }
 
@@ -666,9 +666,9 @@ div.socials-footer div {
     align-items: center;
   }
 
-  button.mobile-menu-exit .icon {
+  /* button.mobile-menu-exit .icon {
 
-  }
+  } */
 
   div.homepage-hero {
     margin-bottom: 1rem;
