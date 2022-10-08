@@ -222,7 +222,8 @@ span.slogan {
 }
 
 .btn.btn-lead {
-  outline: 1px solid #fafafa;
+  /* outline: 1px solid #fafafa; */
+  border: 1px solid #fafafa;
 }
 
 .btn.book-table {
