@@ -223,7 +223,9 @@ span.slogan {
 
 .btn.btn-lead {
   /* outline: 1px solid #fafafa; */
-  border: 10px dashed #ffffff;
+  /* border: 2px solid #ffffff; */
+  box-shadow: 5px 5px 1px #fafafa, -5px -5px 1px #fafafa, 5px -5px 1px #fafafa, -5px 5px 1px #fafafa;
+
 }
 
 .btn.book-table {
@@ -412,7 +414,7 @@ section.booking > div {
 
 div.booking-wrapper {
   width: 45%;
-  max-width: 50%;
+  /* max-width: 50%; */
 }
 
 form.booking-form {
@@ -420,6 +422,7 @@ form.booking-form {
   flex-flow: column nowrap;
   gap: 1rem;
   font-family: 'ManropeLight', sans-serif;
+  letter-spacing: 1px;
 }
 
 fieldset {
@@ -444,6 +447,10 @@ input#terms.terms {
   height: 1em;
 }
 
+input {
+  font-size: 1.1rem;
+}
+
 a.terms-link {
   color: #f8b160;
 }
@@ -451,6 +458,11 @@ a.terms-link {
 #booking-button {
   align-self: flex-start;
   margin-top: 4rem;
+}
+
+input:focus {
+  background-color: #14131c;
+  font-size: 1.5rem;
 }
 
 /* End Booking Section */
@@ -575,7 +587,7 @@ div.socials-footer div {
     width: 100%;
     justify-content: space-between;
     padding: 2rem 3rem 2rem 0;
-    border-bottom: 3px solid #f8b160;
+    border-bottom: 3px solid #fafafa;
     margin: 0 auto;
   }
 
@@ -678,8 +690,13 @@ div.socials-footer div {
     padding: 2rem;
   }
 
-  section.lead {
+  section.lead,
+  section.reviews,
+  section.gallery,
+  section.booking,
+  div.contact-wrapper {
     flex-flow: column nowrap;
+
   }
 
   section.lead > div,
@@ -716,14 +733,38 @@ div.socials-footer div {
   }
 
   section.reviews,
-  section.gallery {
+  section.gallery,
+  section.booking {
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
   }
+  
 
-  section div.lead-link-wrapper {
+  section div.lead-link-wrapper,
+  section div.booking-wrapper {
+    display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
   }
 
+  section.booking  form {
+    width: 100%;
+  }
+
+  #booking-button {
+    width: 100%;
+  }
+
+  footer div.logo-name {
+    display: none;
+  }
+
+  div.terms-conditions {
+    display: none;
+  }
+
+  address.footer-address,
+  div.socials-footer {
+    align-items: center;
+  }
 }
