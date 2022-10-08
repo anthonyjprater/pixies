@@ -223,7 +223,7 @@ span.slogan {
 
 .btn.btn-lead {
   /* outline: 1px solid #fafafa; */
-  border: 1px solid #f8b160;
+  border: 1px solid #ffffff;
 }
 
 .btn.book-table {
@@ -575,7 +575,7 @@ div.socials-footer div {
     width: 100%;
     justify-content: space-between;
     padding: 2rem 3rem 2rem 0;
-    border-bottom: 3px solid #ffffff;
+    border-bottom: 3px solid #f8b160;
     margin: 0 auto;
   }
 
