@@ -627,7 +627,7 @@ div.socials-footer div {
     right: -110px;
     padding: 2rem;
     display: none;
-    min-width: 725px;
+    min-width: 100vw;
     min-height: 100vh;
     background-color: #14131c;
     grid-template-columns: repeat(2, auto);
