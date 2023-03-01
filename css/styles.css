@@ -207,32 +207,43 @@ span.slogan {
   align-items: center;
   padding: 1rem 4rem;
   width: 15rem;
-}
-
-.btn:active {
-  box-shadow: 5px 5px 5px #000, -5px -5px 5px #000, 5px -5px 5px #000, -5px 5px 5px #000;
-}
-
-.btn:hover,
-.btn:focus {
-  background-color: #9a9a9a;
-  color: #14131c;
-  font-weight: bold;
-  box-shadow: 5px 5px 5px #fff, -5px -5px 5px #fff, 5px -5px 5px #fff, -5px 5px 5px #fff;
-}
-
-.btn.btn-lead {
-  /* outline: 1px solid #fafafa; */
-  /* border: 2px solid #ffffff; */
-  box-shadow: 5px 5px 1px #fafafa, -5px -5px 1px #fafafa, 5px -5px 1px #fafafa, -5px 5px 1px #fafafa;
-
+  border: 1px solid #fafafa;
 }
 
 .btn.book-table {
   background-color: #e5e5e5;
   color: #14131c;
   place-self: center;
+  border: none;
 }
+
+.btn.book-table:hover,
+.btn.book-table:focus {
+  background: transparent;
+  border: 1px solid #fafafa;
+  color: #fafafa;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.btn.book-table:active {
+  box-shadow: 5px 5px 5px #aaa, -5px -5px 5px #aaa, 5px -5px 5px #aaa, -5px 5px 5px #aaa;
+}
+
+.btn:hover,
+.btn:focus {
+  /* background-color: #9a9a9a; */
+  border-color: #f8b160;
+  color: #f8b160;
+  /* font-weight: bold; */
+  /* box-shadow: 5px 5px 5px #fff, -5px -5px 5px #fff, 5px -5px 5px #fff, -5px 5px 5px #fff; */
+}
+
+.btn:active {
+  font-weight: bold;
+  border-width: 3px;
+}
+
 
 /* End Hero Section */
 
