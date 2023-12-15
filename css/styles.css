@@ -138,7 +138,8 @@ body {
   flex-flow: column nowrap;
   overflow-x: hidden;
   overflow-y: auto;
-  max-width: 100%;
+	
+/*   width: 100dvw; */
 }
 
 main {
